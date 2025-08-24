@@ -200,7 +200,7 @@ function App() {
             transition={{ duration: 1 }}
             className="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-pink-400 to-purple-500 bg-clip-text text-transparent"
           >
-            Priyanshi Rameshchand Gupta
+            Priyanshi Gupta
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
