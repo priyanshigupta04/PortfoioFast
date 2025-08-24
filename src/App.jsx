@@ -18,6 +18,7 @@ import {
   SiGit,
   SiGithub,
 } from "react-icons/si";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -198,7 +199,7 @@ function App() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-pink-400 to-purple-500 bg-clip-text text-transparent"
+            className="text-4xl sm:text-6xl font-extrabold mb-4  bg-gradient-to-r from-blue-400 via-pink-400 to-purple-500 bg-clip-text text-transparent"
           >
             Priyanshi Gupta
           </motion.h1>
@@ -508,129 +509,45 @@ function App() {
             Projects🙌
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Project 1 */}
-            <motion.div
-              variants={projectCardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-lg border-2 border-transparent bg-clip-padding rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:border-blue-300"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 text-center">
-                  Hotel Booking System - QuickStay
-                </h3>
-                <p className="text-slate-600 mb-4 text-sm text-center">2025</p>
-                <p className="text-slate-700 mb-6 text-justify">
-                  Engineered a responsive hotel booking web app using React and
-                  Tailwind CSS with dynamic room listings, detailed views,
-                  interactive booking forms, and smart filtering options.
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 mb-4">
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 transition-all duration-200">
-                    React
-                  </span>
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 transition-all duration-200">
-                    Tailwind CSS
-                  </span>
-                </div>
-                <button
-                  className="w-full px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 flex items-center justify-center"
-                  onClick={() =>
-                    window.open(
-                      "https://hotel-management-qug4.vercel.app/",
-                      "_blank"
-                    )
-                  }
-                >
-                  <span className="text-lg mr-2">↗</span>
-                  View Project
-                </button>
-              </div>
-            </motion.div>
-            {/* Project 2 */}
-            <motion.div
-              variants={projectCardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-lg border border-slate-200 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-green-600 transition-colors duration-300 text-center">
-                  Medicine Reminder - MediRemind
-                </h3>
-                <p className="text-slate-600 mb-4 text-sm text-center">2025</p>
-                <p className="text-slate-700 mb-6 text-justify">
-                  Designed a user-friendly medicine reminder platform with
-                  React, HTML, and CSS to help users schedule and track
-                  medication intake with timely alerts.
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 mb-4">
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-green-100 hover:border-green-400 hover:text-green-800 transition-all duration-200">
-                    React
-                  </span>
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-green-100 hover:border-green-400 hover:text-green-800 transition-all duration-200">
-                    HTML
-                  </span>
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-green-100 hover:border-green-400 hover:text-green-800 transition-all duration-200">
-                    CSS
-                  </span>
-                </div>
-                <button
-                  className="w-full px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium bg-gradient-to-r from-green-400 to-blue-400 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 flex items-center justify-center"
-                  onClick={() =>
-                    window.open("https://medi-remind.vercel.app/", "_blank")
-                  }
-                >
-                  <span className="text-lg mr-2">↗</span>
-                  View Project
-                </button>
-              </div>
-            </motion.div>
-            {/* Project 3 */}
-            <motion.div
-              variants={projectCardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-lg border border-slate-200 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors duration-300 text-center">
-                  Music Player - MusicMind
-                </h3>
-                <p className="text-slate-600 mb-4 text-sm text-center">2024</p>
-                <p className="text-slate-700 mb-6 text-justify">
-                  Built a full-stack music player using Python and Django with a
-                  smooth interface for listening, playlist management, and
-                  personalized user experience.
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 mb-4">
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-purple-100 hover:border-purple-400 hover:text-purple-800 transition-all duration-200">
-                    Python
-                  </span>
-                  <span className="px-3 py-1 border border-slate-300 text-slate-700 text-sm rounded-md bg-white/70 hover:bg-purple-100 hover:border-purple-400 hover:text-purple-800 transition-all duration-200">
-                    Django
-                  </span>
-                </div>
-                <button
-                  className="w-full px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium bg-gradient-to-r from-purple-400 to-pink-400 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all duration-300 flex items-center justify-center"
-                  onClick={() =>
-                    window.open(
-                      "https://musicplay-sox5.onrender.com/",
-                      "_blank"
-                    )
-                  }
-                >
-                  <span className="text-lg mr-2">↗</span>
-                  View Project
-                </button>
-              </div>
-            </motion.div>
+            <ProjectCard
+              image="/HotelManagement.png"
+              alt="Hotel Booking System - QuickStay"
+              name="Hotel Booking System - QuickStay"
+              description="Engineered a responsive hotel booking web app using React and Tailwind CSS with dynamic room listings, detailed views, interactive booking forms, and smart filtering options."
+              tech={["React", "Tailwind CSS"]}
+              buttonColor="border-blue-300"
+              buttonTextColor="text-white"
+              buttonGradient="bg-gradient-to-r from-blue-500 to-purple-500"
+              buttonHover="hover:bg-blue-600 hover:text-white hover:border-blue-600"
+              link="https://hotel-management-qug4.vercel.app/"
+              overlayColor="bg-blue-900/80"
+            />
+            <ProjectCard
+              image="/MediRemind.jpg"
+              alt="Medicine Reminder - MediRemind"
+              name="Medicine Reminder - MediRemind"
+              description="Designed a user-friendly medicine reminder platform with React, HTML, and CSS to help users schedule and track medication intake with timely alerts."
+              tech={["React", "HTML", "CSS"]}
+              buttonColor="border-slate-300"
+              buttonTextColor="text-slate-700"
+              buttonGradient="bg-gradient-to-r from-green-400 to-blue-400"
+              buttonHover="hover:bg-green-600 hover:text-white hover:border-green-600"
+              link="https://medi-remind.vercel.app/"
+              overlayColor="bg-green-900/80"
+            />
+            <ProjectCard
+              image="/musicPlay.png"
+              alt="Music Player - MusicMind"
+              name="Music Player - MusicMind"
+              description="Built a full-stack music player using Python and Django with a smooth interface for listening, playlist management, and personalized user experience."
+              tech={["Python", "Django"]}
+              buttonColor="border-slate-300"
+              buttonTextColor="text-slate-700"
+              buttonGradient="bg-gradient-to-r from-purple-400 to-pink-400"
+              buttonHover="hover:bg-purple-600 hover:text-white hover:border-purple-600"
+              link="https://musicplay-sox5.onrender.com/"
+              overlayColor="bg-purple-900/80"
+            />
           </div>
         </div>
       </section>
