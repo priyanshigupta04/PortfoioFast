@@ -17,6 +17,7 @@ import {
   SiNodedotjs,
   SiGit,
   SiGithub,
+  SiExpress,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import ProjectCard from "./components/ProjectCard";
@@ -47,6 +48,8 @@ const skills = [
     color: "from-sky-400 to-sky-600",
   },
   { icon: SiNodedotjs, label: "Node.js", color: "from-green-500 to-green-700" },
+  { icon: SiExpress, label: "Express.js", color: "from-gray-700 to-gray-900" },
+
   { icon: SiGit, label: "Git", color: "from-red-400 to-red-600" },
   { icon: SiGithub, label: "GitHub", color: "from-gray-700 to-gray-900" },
 ];
